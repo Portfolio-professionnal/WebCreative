@@ -38,13 +38,7 @@
         
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex space-x-6">
-          {{#each headerNav}}
-            <li>
-              <a href="{{this.link}}" class="text-[#2C3E50] hover:text-[#3498DB] transition-colors duration-300 dark:text-white dark:hover:text-[#3498DB]">
-                {{this.label}}
-              </a>
-            </li>
-          {{/each}}
+
           <li>
             <a href="/contact" class="bg-[#3498DB] text-white px-4 py-2 rounded hover:bg-[#2980b9] transition-colors duration-300">
               Contact
@@ -69,13 +63,7 @@
       <!-- Mobile Navigation -->
       <div class="md:hidden hidden" id="mobile-menu">
         <ul class="pt-4 pb-3 space-y-2">
-          {{#each headerNav}}
-            <li>
-              <a href="{{this.link}}" class="block py-2 text-[#2C3E50] hover:text-[#3498DB] transition-colors duration-300 dark:text-white dark:hover:text-[#3498DB]">
-                {{this.label}}
-              </a>
-            </li>
-          {{/each}}
+
           <li>
             <a href="/contact" class="block py-2 text-[#3498DB] font-medium hover:text-[#2980b9] transition-colors duration-300">
               Contact
