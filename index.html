@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        AthenaPro
-    </title>
+    <title>AthenaPro</title>
     <style>
         /* Reset CSS */
         * {
@@ -18,20 +16,25 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden; /* Empêche le scroll horizontal */
         }
 
         img {
             max-width: 100%;
             height: auto;
         }
-        /* Add your custom styles here */
+
+        nav {
+            width: 100vw; /* Assure que le menu ne dépasse pas */
+            overflow-x: hidden;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="overflow-x-hidden">
+<body>
   <div id="root">
     <nav id="header" class="bg-gray-900 shadow-md fixed w-full top-0 z-50">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
         <div class="flex justify-between h-16">
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
@@ -48,13 +51,6 @@
             </ul>
           </div>
 
-          <!-- Right Navigation Items -->
-          <div class="hidden md:flex items-center space-x-4">
-            <a href="https://tidycal.com/athenaprob" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
-              Démarrer un projet
-            </a>
-          </div>
-
           <!-- Mobile menu button -->
           <div class="flex md:hidden items-center">
             <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" aria-controls="mobile-menu" aria-label="Main menu">
@@ -67,17 +63,6 @@
             </button>
           </div>
         </div>
-      </div>
-
-      <!-- Mobile menu, show/hide based on menu state -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <li><a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Accueil</a></li>
-          <li><a href="Mes Réalisations.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Mes Réalisations</a></li>
-          <li><a href="Contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a></li>
-          <li><a href="Comparatif.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Comparateur de prix</a></li>
-          <li><a href="https://tidycal.com/athenaprob" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 hover:text-indigo-300">Démarrer un projet</a></li>
-        </ul>
       </div>
     </nav>
   </div>
